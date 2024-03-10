@@ -28,5 +28,7 @@ mongoose
   .catch((error) => {
     console.log(`Error connecting to DB ${error.message}`);
   });
-
+app.get("/",(req,res)=>{
+  res.send("hello");
+})
 app.use("/api/workouts", workoutRoutes);
